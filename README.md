@@ -32,3 +32,7 @@ This project uses a fake backend, so the state will not persit across refreshes.
 ## Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+
+## ScreenShot 
+
+![image](https://user-images.githubusercontent.com/20626395/147163722-66674398-150c-41c4-8dea-83f216cd6b0d.png)
