@@ -8,12 +8,14 @@ import { connect } from 'react-redux';
 class Home extends Component {
 	render() {
 		const { answeredQuestionIds, unansweredQuestionIds } = this.props;
-		const TABS_LIST=[ {key:"answered",title:"Answered Questions",ids:answeredQuestionIds,Note:"All Questions Answered"},
-						  {key:"unanswered",title:"Unanswered Questions",ids:unansweredQuestionIds,Note:"Create New Questions"}]
+		const TABS_LIST=[ {key:"answered",title:"Answered Questions",ids:answeredQuestionIds,Note:"All Questions Answered",sortId:2},
+						  {key:"unanswered",title:"Unanswered Questions",ids:unansweredQuestionIds,Note:"Create New Questions",sortId:1}]
+		
+		 const tabs = TABS_LIST.sort((a, b) => a.sortId - b.sortId);
 		return (
 			<Fragment>
 				<Tabs>
-					{TABS_LIST.map((tab)=>{
+					{tabs.map((tab)=>{
 						return(
 						<Tab eventKey={tab.key} title={tab.title}>
 						<QuestionsList
